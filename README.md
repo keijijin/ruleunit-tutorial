@@ -104,6 +104,28 @@ Once successfully invoked you should see [{"alcohol":0.25,"point":25}] in the co
 
 The generated application provides out of the box multiple samples of Kogito assets; you can reference the generated Swagger documentation and JUnit tests.
 
+# JUnit テスト
+[DrunkDrivingTest.java](src/test/java/com/sample/DrunkDrivingTest.java)
+```
+@QuarkusTest
+public class DrunkDrivingTest {
+
+    @Test
+    public void HeavyDrunkenTest() {
+        given()
+                .body("{\"drunkDrivings\":[{\"alcohol\":0.25}]}")
+                .contentType(ContentType.JSON)
+            .when()
+                .post("/drunk-driving")
+            .then()
+                .statusCode(200)
+                .body("point", is(Arrays.asList(25)));
+    }
+}
+```
+結果は配列で返ってくるので、Arrays.asList(25)で受ける。
+
+
 # イベントトラッキング機能追加
 - [TrackingAgendaEventListener.java](src/main/java/com/sample/utils/TrackingAgendaEventListener.java)作成
 - [RuleEventListenerConfig.java](src/main/java/com/sample/RuleEventListenerConfig.java)作成
