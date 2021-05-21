@@ -104,6 +104,13 @@ Once successfully invoked you should see [{"alcohol":0.25,"point":25}] in the co
 
 The generated application provides out of the box multiple samples of Kogito assets; you can reference the generated Swagger documentation and JUnit tests.
 
+# イベントトラッキング機能追加
+- [TrackingAgendaEventListener.java](src/main/java/com/sample/utils/TrackingAgendaEventListener.java)作成
+- [RuleEventListenerConfig.java](src/main/java/com/sample/RuleEventListenerConfig.java)作成
+
+That's all.
+
+
 # Developing
 
 Add your business assets resources (process definition, rules, decisions) into src/main/resources.

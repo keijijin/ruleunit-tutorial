@@ -1,0 +1,54 @@
+POST http://localhost:8080/drunk-driving
+Content-Type: application/json
+Accept: application/json
+
+{
+  "drunkDrivings": [
+    {
+      "alcohol": 0.15
+    }
+  ]
+}
+
+###
+POST http://localhost:8080/drunk-driving
+Content-Type: application/json
+Accept: application/json
+
+{
+  "drunkDrivings": [
+    {
+      "alcohol": 0.25
+    }
+  ]
+}
+###
+POST http://localhost:8080/drunk-driving
+Content-Type: application/json
+Accept: application/json
+
+{
+  "drunkDrivings": [
+    {
+      "alcohol": 0.05
+    }
+  ]
+}
+###
+POST http://localhost:8080/drunk-driving
+Content-Type: application/json
+Accept: application/json
+
+{
+  "drunkDrivings": [
+    {
+      "alcohol": 0.25
+    },
+    {
+      "alcohol": 0.15
+    },
+    {
+      "alcohol": 0.05
+    }
+  ]
+}
